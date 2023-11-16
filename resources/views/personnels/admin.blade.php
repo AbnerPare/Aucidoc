@@ -38,6 +38,12 @@
                         <a href="{{ URL::to('/administrativecreate') }}" class="btn btn-success btn-xs py-0 ">Ajouter</a>
                     </div>
                 </div>
+                <div class="col-md-3 col-lg-2 col-sm-4 mb-4 bm-4 wow fadeIn" data-wow-delay=".5s">
+                    <div style="background-color: rgb(145, 167, 167)" class="pb-4 pt-4 text-center services-content">
+                        <h6>Ajout d'un nouveau personnel</h6>
+                        <a href="{{ URL::to('/personnelcreate') }}" class="btn btn-success btn-xs py-0 ">Ajouter</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

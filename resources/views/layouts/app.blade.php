@@ -30,7 +30,7 @@
         }
 
         .foot {
-            position: fixed;
+            /* position: fixed; */
             bottom: 0;
             width: 100%;
         }
@@ -136,9 +136,9 @@
                     var cell = $(this);
                     var statutText = cell.text().trim();
                     if (selectedStatut === 'all' || selectedStatut === statutText) {
-                        cell.closest('.col-6').show();
+                        cell.closest('.col-12').show();
                     } else {
-                        cell.closest('.col-6').hide();
+                        cell.closest('.col-12').hide();
                     }
                 });
             });

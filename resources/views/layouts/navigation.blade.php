@@ -1,4 +1,3 @@
-
 <nav x-data="{ open: false }" class="bg-dark fixed-top shadow border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -10,37 +9,128 @@
                     </a>
                 </div>
                 <!-- Navigation Links -->
-                <div class="hidden space-x-6 sm:-my-px sm:ms-10 sm:flex">
+                <div class="hidden space-x-4 sm:-my-px sm:ms-2 sm:flex">
                     <x-nav-link :href="route('accueil')" :active="request()->routeIs('accueil')" class="text-white" style="text-decoration: none">
                         {{ __(' Accueil') }}
                     </x-nav-link>
                 </div>
-                <div class="hidden space-x-6 sm:-my-px sm:ms-10 sm:flex">
+                <div class="hidden space-x-6 sm:-my-px sm:ms-6 sm:flex">
                     <x-nav-link :href="route('projets.projet')" :active="request()->routeIs('projets.projet')" class="text-white" style="text-decoration: none">
                         {{ __('Projets') }}
                     </x-nav-link>
                 </div>
-                <div class="hidden space-x-6 sm:-my-px sm:ms-10 sm:flex">
+                <div class="hidden space-x-6 sm:-my-px sm:ms-6 sm:flex">
                     <x-nav-link :href="route('documents.document')" :active="request()->routeIs('documents.document')" class="text-white" style="text-decoration: none">
                         {{ __('Documents') }}
                     </x-nav-link>
                 </div>
-                               
-                <div class="hidden space-x-6 sm:-my-px sm:ms-10 sm:flex">
+
+                <div class="hidden space-x-6 sm:-my-px sm:ms-6 sm:flex">
                     <x-nav-link :href="route('personnels.personnel')" :active="request()->routeIs('personnels.personnel')" class="text-white" style="text-decoration: none">
                         {{ __('Personnel') }}
                     </x-nav-link>
                 </div>
-                <div class="hidden space-x-6 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('personnels.demande')" :active="request()->routeIs('personnels.demande')" class="text-white" style="text-decoration: none">
-                        {{ __('Mes demandes') }}
-                    </x-nav-link>
+                <!-- Settings Dropdown -->
+                <div class="hidden sm:flex sm:items-center sm:ms-5 justify-end">
+                    <x-dropdown align="right" width="48">
+                        <x-slot name="trigger">
+                            <button
+                                class="inline-flex items-center px-3 py-2 border-none  text-sm leading-4 font-medium rounded-md text-gray-500  text-white focus:outline-none transition ease-in-out duration-150">
+                                <div class="text-white">{{ __('Demandes') }}</div>
+
+                                <div class="ms-1">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                            </button>
+                        </x-slot>
+
+                        <x-slot name="content">
+                            <x-dropdown-link :href="route('profile.edit')" style="text-decoration: none">
+                                {{ __('Attestations') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('profile.edit')" style="text-decoration: none">
+                                {{ __('Ordre de misssion') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('profile.edit')" style="text-decoration: none">
+                                {{ __('Demande de congé') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('profile.edit')" style="text-decoration: none">
+                                {{ __('Demande de fonds') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('profile.edit')" style="text-decoration: none">
+                                {{ __("Autorisation d'absence") }}
+                            </x-dropdown-link>
+                        </x-slot>
+                    </x-dropdown>
                 </div>
-                <div class="hidden space-x-6 sm:-my-px sm:ms-10 sm:flex">
+                <div class="hidden sm:flex sm:items-center sm:ms-2 justify-end">
+                    <x-dropdown align="right" width="48">
+                        <x-slot name="trigger">
+                            <button
+                                class="inline-flex items-center px-3 py-2 border-none  text-sm leading-4 font-medium rounded-md text-gray-500  text-white focus:outline-none transition ease-in-out duration-150">
+                                <div class="text-white">{{ __('Finance') }}</div>
+
+                                <div class="ms-1">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                            </button>
+                        </x-slot>
+
+                        <x-slot name="content">
+                            <x-dropdown-link :href="route('profile.edit')" style="text-decoration: none">
+                                {{ __('Demande de fonds') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('profile.edit')" style="text-decoration: none">
+                                {{ __('Fournisseur') }}
+                            </x-dropdown-link>
+                        </x-slot>
+                    </x-dropdown>
+                </div>
+                <div class="hidden sm:flex sm:items-center sm:ms-2 justify-end">
+                    <x-dropdown align="right" width="48">
+                        <x-slot name="trigger">
+                            <button
+                                class="inline-flex items-center px-3 py-2 border-none  text-sm leading-4 font-medium rounded-md text-gray-500  text-white focus:outline-none transition ease-in-out duration-150">
+                                <div class="text-white">{{ __('Tâches') }}</div>
+
+                                <div class="ms-1">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                            </button>
+                        </x-slot>
+
+                        <x-slot name="content">
+                            <x-dropdown-link :href="route('profile.edit')" style="text-decoration: none">
+                                {{ __('Demande de tâche') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('profile.edit')" style="text-decoration: none">
+                                {{ __('Atrubuer une tâche') }}
+                            </x-dropdown-link>
+                        </x-slot>
+                    </x-dropdown>
+                </div>
+                <div class="hidden space-x-6 sm:-my-px sm:ms-4 sm:flex">
                     <x-nav-link :href="route('forum.forum')" :active="request()->routeIs('forum.forum')" class="text-white" style="text-decoration: none">
                         {{ __('Forum') }}
                     </x-nav-link>
                 </div>
+
+
             </div>
 
 
@@ -70,17 +160,22 @@
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
+                        <x-dropdown-link :href="route('profile.edit')" style="text-decoration: none">
                             {{ __('Mon compte') }}
                         </x-dropdown-link>
 
+
+                        <x-dropdown-link :href="route('personnels.demande')" style="text-decoration: none">
+                            {{ __('Mes demandes') }}
+                        </x-dropdown-link>
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
                             <x-dropdown-link :href="route('logout')"
                                 onclick="event.preventDefault();
-                                                this.closest('form').submit();" class="text-danger">
+                                                this.closest('form').submit();"
+                                class="text-danger" style="text-decoration: none">
                                 {{ __('Déconnexion') }}
                             </x-dropdown-link>
                         </form>
@@ -151,14 +246,17 @@
                 <x-responsive-nav-link :href="route('profile.edit')" class="text-info">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
-
+                <x-dropdown-link :href="route('personnels.demande')" style="text-decoration: none">
+                    {{ __('Mes demandes') }}
+                </x-dropdown-link>
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
 
                     <x-responsive-nav-link :href="route('logout')"
                         onclick="event.preventDefault();
-                                        this.closest('form').submit();" class="text-danger">
+                                        this.closest('form').submit();"
+                        class="text-danger">
                         {{ __('Déconnexion ') }}
                     </x-responsive-nav-link>
                 </form>

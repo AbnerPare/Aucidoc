@@ -1,5 +1,5 @@
  <!-- Footer Start -->
- <footer class="bg-dark pt-2 fixed-bottom footer">
+ <footer class="bg-dark pt-2 footer">
     <div class="container-fluid text-white">
         <div class="row">
 

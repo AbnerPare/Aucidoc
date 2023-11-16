@@ -80,11 +80,11 @@ Route::middleware('auth')->group(function () {
 });
 Route::middleware('auth')->group(function () {
     Route ::get('/admin', [PersonnelController ::class, 'admin'])->name('personnels.admin') ;
-
-});
-
-Route::middleware('auth')->group(function () {
     Route ::get('/personnel', [PersonnelController ::class, 'personnel'])->name('personnels.personnel') ;
+    Route ::get('/personnelcreate', [PersonnelController ::class,'personnelcreate'])->name('personnels.personnelcreate') ;
+    Route ::post('/personnel', [PersonnelController ::class,'storepersonnel'])->name('personnels.storepersonnel') ;
+    Route::get('/{personnel}', [PersonnelController::class, 'edit'])->name('personnels.edit');
+    Route::put('/{id}', [PersonnelController::class, 'update'])->name('personnels.update');
 });
 
 
