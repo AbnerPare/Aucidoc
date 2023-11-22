@@ -1,5 +1,5 @@
  <!-- Footer Start -->
- <footer class="bg-dark pt-2 footer">
+ <footer class="bg-dark pt-2 foot">
     <div class="container-fluid text-white">
         <div class="row">
 
@@ -11,31 +11,31 @@
             </div>
             <div class="col-sm-3 text-center mt-2 ">
                 <a href=""><i id="maCarte" class="m-1 fab fa-twitter text-white bg-info p-2"
-                        style="border-radius: 50px"></i></a>
+                        style="border-radius: 50px ; text-decoration:none"></i></a>
                 <a href=""><i id="maCarte" class="m-1 fab fa-facebook-f text-white bg-info p-2"
-                        style="border-radius: 50px"></i></a>
+                        style="border-radius: 50px text-decoration:none"></i></a>
                 <a href=""><i id="maCarte" class="m-1 fab fa-youtube text-white bg-danger p-2"
-                        style="border-radius: 50px"></i></a>
+                        style="border-radius: 50px text-decoration:none"></i></a>
                 <a href=""><i id="maCarte" class="m-1 fab fa-instagram text-white bg-danger p-2"
-                        style="border-radius: 50px"></i></a>
+                        style="border-radius: 50px text-decoration:none"></i></a>
                 <a href=""><i id="maCarte" class="m-1 fab fa-linkedin-in text-white bg-info p-2"
-                        style="border-radius: 50px"></i></a>
+                        style="border-radius: 50px text-decoration:none"></i></a>
             </div>
             <div class="col-sm-5 mt-2 justify-content-center text-center">
                 <p><i class="fa fa-map-marker-alt"></i> Cité SOCOGIB Ouaga 2000, Villa N°157
                     09 BP 753 Ouagadougou 09 Burkina Faso</p>
                 <p>
-                    <a class="fa fa-phone-alt text-white" href="tel:+22625505443" target="_blank"> 25 50 54
+                    <a style="text-decoration:none" class="fa fa-phone-alt text-white" href="tel:+22625505443" target="_blank"> 25 50 54
                         43</a>
                 </p>
-                <p><a class="fa fa-envelope text-white" href="mailto:contact@centrecitoyen.org" target="_blank">
+                <p><a style="text-decoration:none" class="fa fa-envelope text-white" href="mailto:contact@centrecitoyen.org" target="_blank">
                         contact@centrecitoyen.org</a></p>
             </div>
 
             <hr class="mt-1" style="background-color: white;height:2px; margin: 0 auto; width: 80%; ">
             <div class="col-sm-12 text-center mt-2 mb-2">
                 &copy; 2023 Tous droits réservés :
-                <a href="http://www.centrecitoyen.org/" class="text-white">
+                <a style="text-decoration:none" href="http://www.centrecitoyen.org/" class="text-white">
                     Centre d’information et de documentation citoyennes
                 </a>
             </div>

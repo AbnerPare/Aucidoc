@@ -30,12 +30,12 @@
         </div>
     </x-slot>
 
-    <div class=" gradient-background ">
+    <div>
         <div class="container-fluid mt-3  mb-5">
             <div class="row" style="border-radius: 20px">
                 @foreach ($users as $user)
                 <div class="col-12 col-md-6 mb-2">
-                    <div style="border: 2px solid #b1bdd7; border-radius: 20px; background-color:#9aadd6;">
+                    <div style="border: 2px solid #131414; border-radius: 20px; background-color:#131414;">
                         <div class="d-flex align-items-center">
                             <div class="statut-cell mr-2">
                                 <h6>

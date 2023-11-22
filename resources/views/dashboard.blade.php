@@ -5,11 +5,11 @@
         </h2>
     </x-slot> --}}
 
-    {{-- <div class="container-fluid mb-0">
+    <div class="container-fluid mb-0 bg">
         <div class="row">
             <div class="col-sm-12">
-                <img src="img/cidoc.jpg" alt="" style="width: 100%">
+                {{-- <img src="img/cidoc.jpg" alt="" style="width: 100%"> --}}
             </div>
         </div>
-    </div> --}}
+    </div>
 </x-app-layout>

@@ -1,4 +1,4 @@
-<x-app-layout>
+{{-- <x-app-layout>
     <x-slot name="header">
         <div class="container mt-5 ">
             <div class="row">
@@ -138,4 +138,4 @@
         </div>
     </div>
 </x-app-layout>
-
+ --}}

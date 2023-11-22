@@ -28,11 +28,11 @@
                                     value="En congé">
                                 <label class="form-check-label" for="conge">En congé</label>
                             </div>
-                            <div class="form-check form-check-inline">
+                            {{-- <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="statut-filter" id="non-disponible"
                                     value="Non disponible">
                                 <label class="form-check-label" for="non-disponible">Non disponible</label>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -104,10 +104,10 @@
                                     <td>
                                         <h6 style="font-size: 20px">{{ $user->Precision }}</h6>
                                     </td>
-                                    <td>
+                                    {{-- <td>
                                         <a href="{{ route('personnels.edit', $user->id) }}"
                                             class="btn btn-primary">Modifier</a>
-                                    </td>
+                                    </td> --}}
                                 </tr>
                             @endforeach
                         </tbody>

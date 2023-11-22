@@ -12,6 +12,17 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     <style>
+        .bg {
+            background-image: url('img/fond.png');
+            /* Remplacez par le chemin de votre image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            /* Ajuster la hauteur en fonction de vos besoins */
+            color: #ffffff;
+            /* Couleur du texte sur le fond d'écran */
+        }
+
         html,
         body {
             background-color: white;
@@ -30,7 +41,7 @@
         }
 
         .foot {
-            /* position: fixed; */
+            position: fixed;
             bottom: 0;
             width: 100%;
         }
@@ -42,7 +53,6 @@
 
         .gradient-background {
             padding: 20px;
-            background: linear-gradient(to bottom, #666, #ffffff);
             /* Autres propriétés CSS au besoin */
             /* Couleur du texte pour une meilleure lisibilité */
         }
@@ -56,7 +66,7 @@
         }
 
         .text-gradient {
-            background: linear-gradient(to bottom, #787777, #ffffff);
+            /* Autres propriétés CSS au besoin */
             -webkit-background-clip: text;
             /* Permet au dégradé de traverser le texte */
             color: transparent;
@@ -98,7 +108,7 @@
         @endif
 
         <!-- Page Content -->
-        <main>
+        <main class="bg">
             {{ $slot }}
         </main>
         @include('layouts.footer')

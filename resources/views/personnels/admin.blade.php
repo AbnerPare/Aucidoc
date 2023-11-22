@@ -44,6 +44,54 @@
                         <a href="{{ URL::to('/personnelcreate') }}" class="btn btn-success btn-xs py-0 ">Ajouter</a>
                     </div>
                 </div>
+                <div class="col-md-3 col-lg-2 col-sm-4 mb-4 bm-4 wow fadeIn" data-wow-delay=".5s">
+                    <div style="background-color: rgb(145, 167, 167)" class="pb-4 pt-4 text-center services-content">
+                        <h6>Ajout d'un contrat</h6>
+                        <a href="{{ URL::to('/fichedecontratcreate') }}" class="btn btn-success btn-xs py-0 ">Ajouter</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-2 col-sm-4 mb-4 bm-4 wow fadeIn" data-wow-delay=".5s">
+                    <div style="background-color: rgb(145, 167, 167)" class="pb-4 pt-4 text-center services-content">
+                        <h6>Ajout d'une mission</h6>
+                        <a href="{{ URL::to('/fichedemissioncreate') }}" class="btn btn-success btn-xs py-0 ">Ajouter</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-2 col-sm-4 mb-4 bm-4 wow fadeIn" data-wow-delay=".5s">
+                    <div style="background-color: rgb(145, 167, 167)" class="pb-4 pt-4 text-center services-content">
+                        <h6>Ajout d'un congé</h6>
+                        <a href="{{ URL::to('/fichedecongécreate') }}" class="btn btn-success btn-xs py-0 ">Ajouter</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-2 col-sm-4 mb-4 bm-4 wow fadeIn" data-wow-delay=".5s">
+                    <div style="background-color: rgb(145, 167, 167)" class="pb-4 pt-4 text-center services-content">
+                        <h6>Ajout d'un fichier DED </h6>
+                        <a href="{{ URL::to('/fichededcreate') }}" class="btn btn-success btn-xs py-0 ">Ajouter</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-2 col-sm-4 mb-4 bm-4 wow fadeIn" data-wow-delay=".5s">
+                    <div style="background-color: rgb(145, 167, 167)" class="pb-4 pt-4 text-center services-content">
+                        <h6>Ajout d'un fichier DHC </h6>
+                        <a href="{{ URL::to('/fichedhccreate') }}" class="btn btn-success btn-xs py-0 ">Ajouter</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-2 col-sm-4 mb-4 bm-4 wow fadeIn" data-wow-delay=".5s">
+                    <div style="background-color: rgb(145, 167, 167)" class="pb-4 pt-4 text-center services-content">
+                        <h6>Ajout d'un fichier protection </h6>
+                        <a href="{{ URL::to('/ficheprotectioncreate') }}" class="btn btn-success btn-xs py-0 ">Ajouter</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-2 col-sm-4 mb-4 bm-4 wow fadeIn" data-wow-delay=".5s">
+                    <div style="background-color: rgb(145, 167, 167)" class="pb-4 pt-4 text-center services-content">
+                        <h6>Ajout d'un fichier administrative </h6>
+                        <a href="{{ URL::to('/ficheadministrativecreate') }}" class="btn btn-success btn-xs py-0 ">Ajouter</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-2 col-sm-4 mb-4 bm-4 wow fadeIn" data-wow-delay=".5s">
+                    <div style="background-color: rgb(145, 167, 167)" class="pb-4 pt-4 text-center services-content">
+                        <h6>Ajout d'un fichier logistique </h6>
+                        <a href="{{ URL::to('/fichelogistiquecreate') }}" class="btn btn-success btn-xs py-0 ">Ajouter</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -54,47 +54,46 @@ class PersonnelController extends Controller {
             'status' => 'success',
         ] );
     }
-    
-    public function edit( $id ) {
-        try {
-            $user = Personnel::findOrFail( $id );
-            return view( 'personnels.edit', compact( 'user' ) );
-        } catch ( \Exception $e ) {
-            abort( 404 );
-        }
-    }
 
-    public function update( Request $request, $id ) {
-        $validatedData = $request->validate( [
-            'Nom' => 'required',
-            'Prénom' => 'required',
-            'Email' => 'required|email|unique:personnels,Email,'.$id,
-            'Téléphone' => 'required',
-            'Département' => 'required',
-            'Statut_de_présence' => 'required',
-            'Precision' => 'required',
-        ] );
+    // public function edit( $id ) {
+    //     try {
+    //         $user = Personnel::findOrFail( $id );
+    //         return view( 'personnels.edit', compact( 'user' ) );
+    //     } catch ( \Exception $e ) {
+    //         abort( 404 );
+    //     }
+    // }
 
-        $user = Personnel::find( $id );
-        if ( !$user ) {
-            abort( 404 );
-        }
+    // public function update( Request $request, $id ) {
+    //     $validatedData = $request->validate( [
+    //         'Nom' => 'required',
+    //         'Prénom' => 'required',
+    //         'Email' => 'required|email|unique:personnels,Email,'.$id,
+    //         'Téléphone' => 'required',
+    //         'Département' => 'required',
+    //         'Statut_de_présence' => 'required',
+    //         'Precision' => 'required',
+    // ] );
 
-        $user->Nom = $validatedData[ 'Nom' ];
-        $user->Prénom = $validatedData[ 'Prénom' ];
-        $user->Email = trim( $validatedData[ 'Email' ] );
-        $user->Téléphone = $validatedData[ 'Téléphone' ];
-        $user->Département = $validatedData[ 'Département' ];
-        $user->Statut_de_présence = $validatedData[ 'Statut_de_présence' ];
-        $user->Precision = $validatedData[ 'Precision' ];
-        $user->save();
+    //     $user = Personnel::find( $id );
+    //     if ( !$user ) {
+    //         abort( 404 );
+    //     }
 
-        return redirect()->route( 'personnels.personnel' )->with( [
-            'message' => 'Personnel modifié avec succès !',
-            'status' => 'success'
-        ] );
-    } 
+    //     $user->Nom = $validatedData[ 'Nom' ];
+    //     $user->Prénom = $validatedData[ 'Prénom' ];
+    //     $user->Email = trim( $validatedData[ 'Email' ] );
+    //     $user->Téléphone = $validatedData[ 'Téléphone' ];
+    //     $user->Département = $validatedData[ 'Département' ];
+    //     $user->Statut_de_présence = $validatedData[ 'Statut_de_présence' ];
+    //     $user->Precision = $validatedData[ 'Precision' ];
+    //     $user->save();
 
+    //     return redirect()->route( 'personnels.personnel' )->with( [
+    //         'message' => 'Personnel modifié avec succès !',
+    //         'status' => 'success'
+    // ] );
+    // }
 
 }
 

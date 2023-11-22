@@ -4,13 +4,13 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('accueil') }}">
+                    <a href="{{ route('dashboard') }}">
                         <img class="pt-1" src="{{ asset('img/logo.png') }}" alt="Votre Logo" style="width: 65%">
                     </a>
                 </div>
                 <!-- Navigation Links -->
                 <div class="hidden space-x-4 sm:-my-px sm:ms-2 sm:flex">
-                    <x-nav-link :href="route('accueil')" :active="request()->routeIs('accueil')" class="text-white" style="text-decoration: none">
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="text-white" style="text-decoration: none">
                         {{ __(' Accueil') }}
                     </x-nav-link>
                 </div>
@@ -146,7 +146,7 @@
                     <x-slot name="trigger">
                         <button
                             class="inline-flex items-center px-3 py-2 border-none  text-sm leading-4 font-medium rounded-md text-gray-500  text-white focus:outline-none transition ease-in-out duration-150">
-                            <div class="text-info">{{ Auth::user()->name }}</div>
+                            <div class="text-white">{{ Auth::user()->name }}</div>
 
                             <div class="ms-1">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
@@ -202,7 +202,7 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
         <div class="pt-2 pb-2 space-y-1">
-            <x-responsive-nav-link :href="route('accueil')" :active="request()->routeIs('accueil')" class="text-success">
+            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="text-success">
                 {{ __('Accueil') }}
             </x-responsive-nav-link>
         </div>
@@ -246,7 +246,7 @@
                 <x-responsive-nav-link :href="route('profile.edit')" class="text-info">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
-                <x-dropdown-link :href="route('personnels.demande')" style="text-decoration: none">
+                <x-dropdown-link :href="route('personnels.demande')" style="text-decoration: none; color:white">
                     {{ __('Mes demandes') }}
                 </x-dropdown-link>
                 <!-- Authentication -->

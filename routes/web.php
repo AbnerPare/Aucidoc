@@ -11,6 +11,16 @@ use App\Http\Controllers\ResumedhcController;
 use App\Http\Controllers\ResumelogistiqueController;
 use App\Http\Controllers\ResumeprotectionController;
 use App\Http\Controllers\ResumeadministrativeController;
+use App\Http\Controllers\FichedecontratController;
+use App\Http\Controllers\FichedemissionController;
+use App\Http\Controllers\FichedecongéController;
+use App\Http\Controllers\FichededController;
+use App\Http\Controllers\FichedhcController;
+use App\Http\Controllers\FicheprotectionController;
+use App\Http\Controllers\FicheadministrativeController;
+use App\Http\Controllers\FichelogistiqueController;
+
+
 
 
 
@@ -30,10 +40,58 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::middleware('auth')->group(function () {
+    Route ::get('/fichelogistique', [FichelogistiqueController ::class,'fichelogistique'])->name('documents.fichelogistique') ;
+    Route ::get('/fichelogistiquecreate', [FichelogistiqueController ::class,'fichelogistiquecreate'])->name('documents.fichelogistiquecreate') ;
+    Route ::post('/fichelogistique', [FichelogistiqueController ::class,'storefichelogistique'])->name('documents.storefichelogistique') ;
+});
+
+Route::middleware('auth')->group(function () {
+    Route ::get('/ficheadministrative', [FicheadministrativeController ::class,'ficheadministrative'])->name('documents.ficheadministrative') ;
+    Route ::get('/ficheadministrativecreate', [FicheadministrativeController ::class,'ficheadministrativecreate'])->name('documents.ficheadministrativecreate') ;
+    Route ::post('/ficheadministrative', [FicheadministrativeController ::class,'storeficheadministrative'])->name('documents.storeficheadministrative') ;
+});
+
+Route::middleware('auth')->group(function () {
+    Route ::get('/ficheprotection', [FicheprotectionController ::class,'ficheprotection'])->name('documents.ficheprotection') ;
+    Route ::get('/ficheprotectioncreate', [FicheprotectionController ::class,'ficheprotectioncreate'])->name('documents.ficheprotectioncreate') ;
+    Route ::post('/ficheprotection', [FicheprotectionController ::class,'storeficheprotection'])->name('documents.storeficheprotection') ;
+});
+
+Route::middleware('auth')->group(function () {
+    Route ::get('/fichedhc', [FichedhcController ::class,'fichedhc'])->name('documents.fichedhc') ;
+    Route ::get('/fichedhccreate', [FichedhcController ::class,'fichedhccreate'])->name('documents.fichedhccreate') ;
+    Route ::post('/fichedhc', [FichedhcController ::class,'storefichedhc'])->name('documents.storefichedhc') ;
+});
+
+Route::middleware('auth')->group(function () {
+    Route ::get('/ficheded', [FichededController ::class,'ficheded'])->name('documents.ficheded') ;
+    Route ::get('/fichededcreate', [FichededController ::class,'fichededcreate'])->name('documents.fichededcreate') ;
+    Route ::post('/ficheded', [FichededController ::class,'storeficheded'])->name('documents.storeficheded') ;
+});
+
+Route::middleware('auth')->group(function () {
+    Route ::get('/fichedecongé', [FichedecongéController ::class,'fichedecongé'])->name('documents.fichedecongé') ;
+    Route ::get('/fichedecongécreate', [FichedecongéController ::class,'fichedecongécreate'])->name('documents.fichedecongécreate') ;
+    Route ::post('/fichedecongé', [FichedecongéController ::class,'storefichedecongé'])->name('documents.storefichedecongé') ;
+});
+
+Route::middleware('auth')->group(function () {
+    Route ::get('/fichedemission', [FichedemissionController ::class,'fichedemission'])->name('documents.fichedemission') ;
+    Route ::get('/fichedemissioncreate', [FichedemissionController ::class,'fichedemissioncreate'])->name('documents.fichedemissioncreate') ;
+    Route ::post('/fichedemission', [FichedemissionController ::class,'storefichedemission'])->name('documents.storefichedemission') ;
+});
+
+Route::middleware('auth')->group(function () {
+    Route ::get('/fichedecontrat', [FichedecontratController ::class,'fichedecontrat'])->name('documents.fichedecontrat') ;
+    Route ::get('/fichedecontratcreate', [FichedecontratController ::class,'fichedecontratcreate'])->name('documents.fichedecontratcreate') ;
+    Route ::post('/fichedecontrat', [FichedecontratController ::class,'storefichedecontrat'])->name('documents.storefichedecontrat') ;
+});
+
+
+Route::middleware('auth')->group(function () {
     Route ::get('/administrative', [ResumeadministrativeController ::class,'administrative'])->name('projets.administrative') ;
     Route ::get('/administrativecreate', [ResumeadministrativeController ::class,'administrativecreate'])->name('projets.administrativecreate') ;
     Route ::post('/administrative', [ResumeadministrativeController ::class,'storeadministrative'])->name('projets.storeadministrative') ;
-
 });
 
 Route::middleware('auth')->group(function () {
@@ -70,6 +128,8 @@ Route::middleware('auth')->group(function () {
 });
 Route::middleware('auth')->group(function () {
     Route ::get('/document', [DocumentController ::class, 'document'])->name('documents.document') ;
+    Route ::get('/rapport', [DocumentController ::class, 'rapport'])->name('documents.rapport') ;
+
 });
 Route::middleware('auth')->group(function () {
      Route ::get('/projet', [ProjetController ::class, 'projet'])->name('projets.projet') ;
@@ -83,8 +143,8 @@ Route::middleware('auth')->group(function () {
     Route ::get('/personnel', [PersonnelController ::class, 'personnel'])->name('personnels.personnel') ;
     Route ::get('/personnelcreate', [PersonnelController ::class,'personnelcreate'])->name('personnels.personnelcreate') ;
     Route ::post('/personnel', [PersonnelController ::class,'storepersonnel'])->name('personnels.storepersonnel') ;
-    Route::get('/{personnel}', [PersonnelController::class, 'edit'])->name('personnels.edit');
-    Route::put('/{id}', [PersonnelController::class, 'update'])->name('personnels.update');
+    // Route::get('/{personnel}', [PersonnelController::class, 'edit'])->name('personnels.edit');
+    // Route::put('/{id}', [PersonnelController::class, 'update'])->name('personnels.update');
 });
 
 
@@ -92,9 +152,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/accueil', function () {
-    return view('accueil');
-})->middleware(['auth', 'verified'])->name('accueil');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

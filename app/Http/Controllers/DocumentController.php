@@ -20,6 +20,12 @@ class DocumentController extends Controller
             'user' => $request->user(),
         ]);
     }
+    public function rapport(Request $request): View
+    {
+        return view('documents.rapportdeprojet', [
+            'user' => $request->user(),
+        ]);
+    }
 
   
 }
